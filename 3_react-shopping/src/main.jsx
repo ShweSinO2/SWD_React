@@ -2,6 +2,8 @@ import { createElement } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/router";
 
 //const categories = [
 //  "electronics",
@@ -9,8 +11,6 @@ import "./index.css";
 //  "men's clothing",
 //  "women's clothing"
 //];
-
-const root = document.querySelector("#root");
 
 //view ~ react node
 //const app = createElement(
@@ -29,8 +29,10 @@ const root = document.querySelector("#root");
 //  )
 //);
 
+const root = document.querySelector("#root");
+
 //view render
-createRoot(root).render(App());
+createRoot(root).render(<RouterProvider router={router} />);
 
 //const root = document.querySelector("#root");
 //const ttl = document.createElement("p");
